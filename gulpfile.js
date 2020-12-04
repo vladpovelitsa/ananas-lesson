@@ -49,8 +49,6 @@ gulp.task('scripts', function(done){
     gulp.src([
         'app/libs/jquery/dist/jquery.min.js', 
         'app/libs/slick-carousel/slick/slick.min.js', 
-        'app/libs/paw-select/paw-select.js',
-        'app/libs/paw-range/paw-range.js',
         'app/libs/lightbox/dist/js/lightbox.min.js',
         'app/libs/jquery.maskedinput.js',
         ])
@@ -64,8 +62,6 @@ gulp.task('styles', function(done){
 
     gulp.src([
         'app/libs/slick-carousel/slick/slick.scss',
-        'app/libs/paw-select/paw-select.scss',
-        'app/libs/paw-range/paw-range.scss',
         'app/libs/lightbox/dist/css/lightbox.min.css',
         ])
     .pipe(concat('libs.min.css'))
@@ -108,7 +104,7 @@ gulp.task('html', function(done){
 })
 
 gulp.task('convertJPEG2000', function(done) {
-  gulp.src('app/img/*.{jpg,jpeg,png}')
+  gulp.src('app/img/**/*.{jpg,jpeg,png}')
     .pipe(jpeg2000())
     .pipe(gulp.dest('app/img/'));
 
@@ -124,7 +120,7 @@ gulp.task('convertWEBP', function(done) {
 })
 
 gulp.task('imagemin', function(done) {
-  gulp.src('app/img/*.{jpg,jpeg,png,svg,gif}')
+  gulp.src('app/img/**/*.{jpg,jpeg,png,svg,gif}')
     .pipe(imagemin())
     .pipe(gulp.dest('build/img/'));
 
