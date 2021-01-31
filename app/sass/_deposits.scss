@@ -1,0 +1,243 @@
+.deposits {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    .start {
+        overflow: visible;
+    }
+    &_active {
+        max-width: 526px;
+        &_slide {
+            margin-bottom: 24px;
+        }
+        &_item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            grid-gap: 16px 10px;
+            padding: 24px 36px 22px 20px;
+            background: var(--ui-gray-linear-40);
+            background-blend-mode: multiply;
+            border: 2px solid #000;
+            border-radius: 20px;
+            &-circle {
+                grid-row: 1 / 4;
+            }
+            &-title {
+                text-transform: uppercase;
+                display: inline-block;
+                background: var(--text-gray-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 12px;
+                font-weight: 500;
+                margin-bottom: 6px;
+            }
+            &-income {
+                font-size: 14px;
+                color: #fff;
+                font-weight: 500;
+                span {
+                    color: var(--primary-yellow);
+                }
+            }
+            &-currency {
+                img {
+                    margin-left: auto;
+                }
+            }
+            &-summ {
+                display: flex;
+                color: var(--text-gray-60);
+                font-size: 12px;
+                span {
+                    color: #fff;
+                }
+                p:not(:last-of-type) {
+                    margin-right: 14px;
+                }
+            }
+            &-date {
+                font-size: 12px;
+                color: var(--text-gray-80);
+                font-weight: 500;
+            }
+            &-counter {
+                padding-left: 24px;
+                display: inline-block;
+                background: var(--text-gray-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 10px;
+                text-transform: uppercase;
+                position: relative;
+                margin-top: 5px;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.99935 2.00033C4.68564 2.00033 1.99935 4.68662 1.99935 8.00033C1.99935 11.314 4.68564 14.0003 7.99935 14.0003C11.3131 14.0003 13.9993 11.314 13.9993 8.00033C13.9993 4.68662 11.3131 2.00033 7.99935 2.00033ZM0.666016 8.00033C0.666016 3.95024 3.94926 0.666992 7.99935 0.666992C12.0494 0.666992 15.3327 3.95024 15.3327 8.00033C15.3327 12.0504 12.0494 15.3337 7.99935 15.3337C3.94926 15.3337 0.666016 12.0504 0.666016 8.00033Z' fill='url(%23paint0_linear)'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.00065 3.33301C8.36884 3.33301 8.66732 3.63148 8.66732 3.99967V7.58765L10.9655 8.73672C11.2948 8.90138 11.4283 9.30183 11.2636 9.63115C11.0989 9.96047 10.6985 10.094 10.3692 9.92929L7.70251 8.59596C7.47665 8.48303 7.33398 8.25219 7.33398 7.99967V3.99967C7.33398 3.63148 7.63246 3.33301 8.00065 3.33301Z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='5.02101' y1='-8.39183' x2='26.6373' y2='6.47853' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='8.52175' y1='-0.78473' x2='15.943' y2='2.27846' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+                        center no-repeat;
+                }
+            }
+            &-release {
+                display: inline-block;
+                background: var(--text-gray-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-transform: uppercase;
+                font-size: 10px;
+                padding-left: 24px;
+                position: relative;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    background: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.52827 0.529247C0.788619 0.268897 1.21073 0.268897 1.47108 0.529247L5.47108 4.52925C5.73143 4.7896 5.73143 5.21171 5.47108 5.47206L1.47108 9.47206C1.21073 9.73241 0.788619 9.73241 0.52827 9.47206C0.26792 9.21171 0.26792 8.7896 0.52827 8.52925L4.05687 5.00065L0.52827 1.47206C0.26792 1.21171 0.26792 0.789596 0.52827 0.529247Z' fill='%23FED003'/%3E%3C/svg%3E%0A")
+                        center no-repeat;
+                }
+            }
+        }
+    }
+    &_table {
+        margin-bottom: 12px;
+        &__row {
+            display: grid;
+            grid-template-columns: 2fr 1fr minmax(auto, 1fr);
+            grid-gap: 0 10px;
+            border-bottom: 1px solid rgba(256, 256, 256, 0.1);
+            padding: 14px 0 20px;
+            &--header {
+                .deposits_table__cell {
+                    text-transform: uppercase;
+                    background: var(--text-gray-gradient);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 10px;
+                    font-weight: 500;
+                }
+            }
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+        &__cell {
+            &-main {
+                display: grid;
+                grid-template-columns: 27px 1fr;
+                grid-gap: 3px 8px;
+            }
+            &-currency {
+                display: block;
+                grid-row: 1 / 3;
+            }
+            &-title {
+                text-transform: uppercase;
+                background: var(--text-gray-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            &-income {
+                font-size: 12px;
+                font-weight: 500;
+                color: #fff;
+            }
+            &-amount {
+                text-transform: uppercase;
+                background: var(--text-gray-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            &-start,
+            &-end {
+                display: block;
+                margin-top: 4px;
+                color: var(--text-gray-80);
+                font-size: 12px;
+            }
+            &-total {
+                color: var(--primary-yellow);
+                font-weight: 500;
+                font-size: 12px;
+            }
+        }
+    }
+}
+.circle {
+    position: relative;
+    &_value {
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .c2 {
+        transform: rotate(-90deg);
+        transform-origin: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .deposits {
+        flex-direction: column;
+        &_active {
+            &_item {
+                padding: 16px;
+                &-main,
+                &-summ,
+                &-counter {
+                    grid-column: 1 / 4;
+                    order: 99;
+                }
+                &-circle {
+                    grid-row: 1 / 3;
+                }
+                &-currency,
+                &-date {
+                    text-align: right;
+                    grid-column: 2 / 4;
+                }
+            }
+        }
+        &_table {
+            &__row {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                align-items: center;
+            }
+            &__cell {
+                &-main {
+                    align-items: center;
+                }
+                &-currency {
+                    grid-row: unset;
+                }
+                &-income {
+                    grid-column: 1 / 3;
+                    font-size: 10px;
+                }
+                &-amount,
+                &-start,
+                &-total,
+                &-end {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

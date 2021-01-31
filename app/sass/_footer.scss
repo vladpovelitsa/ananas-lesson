@@ -1,0 +1,93 @@
+.footer {
+    margin-top: auto;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    background: var(--ui-gray-100);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: var(--text-gray-80);
+    font-size: 12px;
+    &__logo {
+        display: block;
+        margin-right: 175px;
+        margin-left: -45px;
+        margin-top: -35px;
+    }
+    &__heading {
+        background: var(--text-gray-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+    &__item {
+        max-width: 250px;
+    }
+    &__value {
+        margin-bottom: 40px;
+        color: var(--text-white);
+        line-height: 1.5;
+        font-size: 16px;
+        a {
+            color: var(--text-white);
+            &:hover {
+                text-decoration: underline;
+            }
+            &[href^="tel"] {
+                font-weight: 500;
+            }
+        }
+    }
+    &__socials {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        li:not(:last-of-type) {
+            margin-right: 16px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            filter: var(--filter-shadow);
+            background: var(--ui-gray-linear-100);
+            background-blend-mode: multiply;
+            &:hover {
+                box-shadow: var(--shadow-yellow);
+            }
+        }
+    }
+    &__link {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--text-gray-80);
+        font-weight: 700;
+        font-size: 14px;
+        &:last-of-type {
+            margin-bottom: 32px;
+        }
+    }
+    &__copyright {
+        line-height: 1.5;
+        font-size: 12px;
+    }
+    &__info {
+        padding-top: 20px;
+    }
+
+    &_start {
+        text-align: center;
+        padding: 80px 15px;
+        font-size: 12px;
+        color: #4a4949;
+    }
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+}

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Trading Insight</title>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="fav.svg" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/libs.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.min.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+
+	<body>
+		<div class="wrapper dark_mode">
+			//= tpl/header_big.html
+			<!--  -->
+			<!-- my_deposits -->
+			<main class="deposits center">
+				<aside class="sidebar">
+					<button class="sidebar__nav_dropdown">
+						Navigation
+						<svg
+							width="14"
+							height="8"
+							viewBox="0 0 14 8"
+							fill="#fff"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976315 1.31658 -0.0976315 0.683417 0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893Z"
+							/>
+						</svg>
+					</button>
+					<ul class="sidebar__nav">
+						<li>
+							<a href="dashboard.html">
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M16.1055 20.4004C16.1055 20.8146 15.7697 21.1504 15.3555 21.1504L8.75547 21.1504C8.34125 21.1504 8.00547 20.8146 8.00547 20.4004C8.00547 19.9862 8.34125 19.6504 8.75547 19.6504L15.3555 19.6504C15.7697 19.6504 16.1055 19.9862 16.1055 20.4004Z"
+									/>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12.0566 20.8506C11.6424 20.8506 11.3066 20.5148 11.3066 20.1006L11.3066 14.7006C11.3066 14.2864 11.6424 13.9506 12.0566 13.9506C12.4709 13.9506 12.8066 14.2864 12.8066 14.7006L12.8066 20.1006C12.8066 20.5148 12.4709 20.8506 12.0566 20.8506Z"
+									/>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M19.1059 13.6502V4.9502H5.00586V13.6502H19.1059ZM4.55586 3.4502C3.97596 3.4502 3.50586 3.9203 3.50586 4.50019V14.1002C3.50586 14.6801 3.97596 15.1502 4.55586 15.1502H19.5559C20.1358 15.1502 20.6059 14.6801 20.6059 14.1002V4.5002C20.6059 3.9203 20.1358 3.4502 19.5559 3.4502H4.55586Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										stroke="transparent"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M8.15625 8.25C8.57046 8.25 8.90625 8.58579 8.90625 9L8.90625 11.55C8.90625 11.9642 8.57046 12.3 8.15625 12.3C7.74204 12.3 7.40625 11.9642 7.40625 11.55L7.40625 9C7.40625 8.58579 7.74204 8.25 8.15625 8.25Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										stroke="transparent"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M15.9551 6.90039C16.3693 6.90039 16.7051 7.23618 16.7051 7.65039L16.7051 11.5504C16.7051 11.9646 16.3693 12.3004 15.9551 12.3004C15.5409 12.3004 15.2051 11.9646 15.2051 11.5504L15.2051 7.65039C15.2051 7.23618 15.5409 6.90039 15.9551 6.90039Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										stroke="unset"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12.0566 5.7002C12.4709 5.7002 12.8066 6.03598 12.8066 6.4502L12.8066 11.5502C12.8066 11.9644 12.4709 12.3002 12.0566 12.3002C11.6424 12.3002 11.3066 11.9644 11.3066 11.5502L11.3066 6.4502C11.3066 6.03598 11.6424 5.7002 12.0566 5.7002Z"
+									/></svg
+								>Dashboard
+							</a>
+						</li>
+						<li>
+							<a href="deposits.html">
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M2.30664 1.34961C2.72085 1.34961 3.05664 1.6854 3.05664 2.09961V20.9996H21.9566C22.3709 20.9996 22.7066 21.3354 22.7066 21.7496C22.7066 22.1638 22.3709 22.4996 21.9566 22.4996H2.45664C1.95959 22.4996 1.55664 22.0967 1.55664 21.5996V2.09961C1.55664 1.6854 1.89243 1.34961 2.30664 1.34961Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M18.957 4.5C19.3712 4.5 19.707 4.83579 19.707 5.25L19.707 18.15C19.707 18.5642 19.3712 18.9 18.957 18.9C18.5428 18.9 18.207 18.5642 18.207 18.15L18.207 5.25C18.207 4.83579 18.5428 4.5 18.957 4.5Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M14.6064 7.5C15.0207 7.5 15.3564 7.83579 15.3564 8.25L15.3564 18.15C15.3564 18.5642 15.0207 18.9 14.6064 18.9C14.1922 18.9 13.8564 18.5642 13.8564 18.15L13.8564 8.25C13.8564 7.83579 14.1922 7.5 14.6064 7.5Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M10.2568 10.5C10.671 10.5 11.0068 10.8358 11.0068 11.25L11.0068 18.15C11.0068 18.5642 10.6711 18.9 10.2568 18.9C9.84262 18.9 9.50684 18.5642 9.50684 18.15L9.50684 11.25C9.50684 10.8358 9.84262 10.5 10.2568 10.5Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M5.90625 13.5C6.32046 13.5 6.65625 13.8358 6.65625 14.25L6.65625 18.15C6.65625 18.5642 6.32046 18.9 5.90625 18.9C5.49204 18.9 5.15625 18.5642 5.15625 18.15L5.15625 14.25C5.15625 13.8358 5.49204 13.5 5.90625 13.5Z"
+									/>
+								</svg>
+
+								My deposits
+							</a>
+						</li>
+						<li>
+							<a href="withdrawal.html" class="active">
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12.0566 3.90039C9.43466 3.90039 7.25912 6.18719 7.25912 8.86775V9.4223L6.72892 9.58482C5.47039 9.97059 4.55664 11.1423 4.55664 12.5254C4.55664 14.2237 5.93337 15.6004 7.63164 15.6004C8.04585 15.6004 8.38164 15.9362 8.38164 16.3504C8.38164 16.7646 8.04585 17.1004 7.63164 17.1004C5.10494 17.1004 3.05664 15.0521 3.05664 12.5254C3.05664 10.6565 4.17672 9.05093 5.78087 8.34044C6.04725 5.1162 8.72829 2.40039 12.0566 2.40039C14.8042 2.40039 17.1394 4.15872 18.0014 6.61032C20.1302 7.36044 21.6566 9.38881 21.6566 11.7754C21.6566 13.7836 20.7299 15.1265 19.5692 15.9512C18.4425 16.7516 17.1137 17.0569 16.2173 17.0995C15.8036 17.1192 15.4522 16.7998 15.4325 16.3861C15.4128 15.9723 15.7322 15.6209 16.146 15.6012C16.8246 15.5689 17.8583 15.3267 18.7004 14.7284C19.5084 14.1543 20.1566 13.2471 20.1566 11.7754C20.1566 9.93681 18.9077 8.38802 17.2107 7.93469L16.7965 7.82406L16.6817 7.41104C16.1185 5.38567 14.26 3.90039 12.0566 3.90039Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12.0568 13.3496C12.4711 13.3496 12.8068 13.6854 12.8068 14.0996L12.8068 18.889L14.0765 17.6193C14.3694 17.3264 14.8443 17.3264 15.1372 17.6193C15.4301 17.9122 15.4301 18.387 15.1372 18.6799L12.0568 21.7603L8.97651 18.6799C8.68361 18.387 8.68361 17.9122 8.97651 17.6193C9.2694 17.3264 9.74427 17.3264 10.0372 17.6193L11.3068 18.8889L11.3068 14.0996C11.3068 13.6854 11.6426 13.3496 12.0568 13.3496Z"
+									/>
+								</svg>
+
+								Withdrawal
+							</a>
+						</li>
+						<li>
+							<a href="refill.html">
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										class="coloring_stroke white"
+										d="M12.0566 5.25C13.587 5.25 15.072 5.77004 16.268 6.72485C17.464 7.67965 18.3 9.01252 18.639 10.5049C18.978 11.9972 18.7997 13.5605 18.1336 14.9383C17.4674 16.3161 16.3528 17.4266 14.9726 18.0877C13.5924 18.7488 12.0285 18.9213 10.5374 18.5768C9.04627 18.2324 7.71647 17.3914 6.76606 16.1919C5.81566 14.9924 5.30107 13.5056 5.30669 11.9752C5.3123 10.4449 5.83779 8.96183 6.79698 7.76935"
+										stroke-width="1.5"
+										stroke-linecap="round"
+									/>
+									<path
+										class="coloring_stroke yellow"
+										d="M12.057 8.40039C12.7534 8.40039 13.4348 8.60236 14.0187 8.98183C14.6026 9.3613 15.064 9.90197 15.3468 10.5383C15.6296 11.1747 15.7218 11.8794 15.6121 12.5671C15.5025 13.2548 15.1958 13.8959 14.7291 14.4128C14.2625 14.9297 13.6559 15.3002 12.983 15.4793C12.31 15.6584 11.5996 15.6385 10.9377 15.422C10.2759 15.2055 9.69102 14.8016 9.25404 14.2594C8.81706 13.7172 8.54671 13.0599 8.47576 12.3672"
+										stroke-width="1.5"
+										stroke-linecap="round"
+									/>
+								</svg>
+
+								Refill
+							</a>
+						</li>
+						<li>
+							<a href="operations.html">
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12.8066 11.25V2.25H11.3066V11.85C11.3066 12.3471 11.7096 12.75 12.2066 12.75H21.8066V11.25H12.8066Z"
+									/>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12.0566 20.25C16.613 20.25 20.3066 16.5564 20.3066 12C20.3066 7.44365 16.613 3.75 12.0566 3.75C7.50029 3.75 3.80664 7.44365 3.80664 12C3.80664 16.5564 7.50029 20.25 12.0566 20.25ZM12.0566 21.75C17.4414 21.75 21.8066 17.3848 21.8066 12C21.8066 6.61522 17.4414 2.25 12.0566 2.25C6.67186 2.25 2.30664 6.61522 2.30664 12C2.30664 17.3848 6.67186 21.75 12.0566 21.75Z"
+									/>
+								</svg>
+
+								Operations
+							</a>
+						</li>
+						<li>
+							<a href="affiliate.html">
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M4.85645 4.94922V6.59922H6.50645V4.94922H4.85645ZM4.10645 3.44922H7.25644C7.67066 3.44922 8.00645 3.78501 8.00645 4.19922V7.34922C8.00645 7.76343 7.67066 8.09922 7.25645 8.09922H4.10645C3.69223 8.09922 3.35645 7.76343 3.35645 7.34922V4.19922C3.35645 3.78501 3.69223 3.44922 4.10645 3.44922Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M11.1563 4.94922V6.59922H12.8063V4.94922H11.1563ZM10.4063 3.44922H13.5562C13.9705 3.44922 14.3063 3.78501 14.3063 4.19922V7.34922C14.3063 7.76343 13.9705 8.09922 13.5563 8.09922H10.4063C9.99204 8.09922 9.65625 7.76343 9.65625 7.34922V4.19922C9.65625 3.78501 9.99204 3.44922 10.4063 3.44922Z"
+									/>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M11.1563 17.25V18.9H12.8063V17.25H11.1563ZM10.4063 15.75H13.5562C13.9705 15.75 14.3063 16.0858 14.3063 16.5V19.65C14.3063 20.0642 13.9705 20.4 13.5563 20.4H10.4063C9.99204 20.4 9.65625 20.0642 9.65625 19.65V16.5C9.65625 16.0858 9.99204 15.75 10.4063 15.75Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M17.457 4.94922V6.59922H19.107V4.94922H17.457ZM16.707 3.44922H19.857C20.2712 3.44922 20.607 3.78501 20.607 4.19922V7.34922C20.607 7.76343 20.2712 8.09922 19.857 8.09922H16.707C16.2928 8.09922 15.957 7.76343 15.957 7.34922V4.19922C15.957 3.78501 16.2928 3.44922 16.707 3.44922Z"
+									/>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M5.00684 11.6496V8.09961H6.50684V11.1996H11.2318V8.09961H12.7318V11.1996H17.4568V8.09961H18.9568V11.6496C18.9568 12.2295 18.4867 12.6996 17.9068 12.6996H12.7318V15.7496H11.2318V12.6996H6.05684C5.47694 12.6996 5.00684 12.2295 5.00684 11.6496Z"
+									/>
+								</svg>
+
+								Affiliate
+							</a>
+						</li>
+						<li>
+							<a href="settings.html">
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M5.53145 8.40039C5.94566 8.40039 6.28145 8.73618 6.28145 9.15039V11.072H6.91145C7.35051 11.072 7.70645 11.428 7.70645 11.867V18.1337C7.70645 18.5728 7.35051 18.9287 6.91145 18.9287H6.28145V20.8504C6.28145 21.2646 5.94566 21.6004 5.53145 21.6004C5.11723 21.6004 4.78145 21.2646 4.78145 20.8504V18.9287H4.15145C3.71238 18.9287 3.35645 18.5728 3.35645 18.1337V11.867C3.35645 11.428 3.71238 11.072 4.15145 11.072H4.78145V9.15039C4.78145 8.73618 5.11723 8.40039 5.53145 8.40039ZM4.85645 12.572V17.4287H6.20645V12.572H4.85645Z"
+									/>
+									<path
+										class="coloring_fill white"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M18.4318 8.40039C18.846 8.40039 19.1818 8.73618 19.1818 9.15039V11.072H19.8118C20.2509 11.072 20.6068 11.428 20.6068 11.867V18.1337C20.6068 18.5728 20.2509 18.9287 19.8118 18.9287H19.1818V20.8504C19.1818 21.2646 18.846 21.6004 18.4318 21.6004C18.0176 21.6004 17.6818 21.2646 17.6818 20.8504V18.9287H17.0518C16.6128 18.9287 16.2568 18.5728 16.2568 18.1337V11.867C16.2568 11.428 16.6128 11.072 17.0518 11.072H17.6818V9.15039C17.6818 8.73618 18.0176 8.40039 18.4318 8.40039ZM17.7568 12.572V17.4287H19.1068V12.572H17.7568Z"
+									/>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M11.9816 2.40039C12.3959 2.40039 12.7316 2.73618 12.7316 3.15039V5.1063H13.3616C13.8007 5.1063 14.1566 5.46223 14.1566 5.9013V12.2495C14.1566 12.6885 13.8007 13.0445 13.3616 13.0445H12.7316V15.0004C12.7316 15.4146 12.3959 15.7504 11.9816 15.7504C11.5674 15.7504 11.2316 15.4146 11.2316 15.0004V13.0445H10.6016C10.1626 13.0445 9.80664 12.6886 9.80664 12.2495V5.9013C9.80664 5.46223 10.1626 5.1063 10.6016 5.1063H11.2316V3.15039C11.2316 2.73618 11.5674 2.40039 11.9816 2.40039ZM11.3066 6.6063V11.5445H12.6566V6.6063H11.3066Z"
+									/>
+								</svg>
+
+								Settings
+							</a>
+						</li>
+						<li>
+							<a href="logout.html">
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										class="coloring_fill yellow"
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M4.93164 5.25C4.63327 5.25 4.34712 5.36853 4.13614 5.5795C3.92517 5.79048 3.80664 6.07663 3.80664 6.375V17.625C3.80664 17.9234 3.92517 18.2095 4.13614 18.4205C4.34712 18.6315 4.63327 18.75 4.93164 18.75H12.4316C12.73 18.75 13.0162 18.6315 13.2271 18.4205C13.4381 18.2095 13.5566 17.9234 13.5566 17.625V15.75C13.5566 15.3358 13.8924 15 14.3066 15C14.7208 15 15.0566 15.3358 15.0566 15.75V17.625C15.0566 18.3212 14.7801 18.9889 14.2878 19.4811C13.7955 19.9734 13.1278 20.25 12.4316 20.25H4.93164C4.23545 20.25 3.56777 19.9734 3.07548 19.4811C2.5832 18.9889 2.30664 18.3212 2.30664 17.625V6.375C2.30664 5.67881 2.5832 5.01113 3.07548 4.51884C3.56777 4.02656 4.23545 3.75 4.93164 3.75H12.0566C12.7609 3.75 13.483 4.02832 14.0325 4.45883C14.5791 4.88709 15.0566 5.5524 15.0566 6.375V8.25C15.0566 8.66421 14.7208 9 14.3066 9C13.8924 9 13.5566 8.66421 13.5566 8.25V6.375C13.5566 6.16212 13.4269 5.88994 13.1074 5.63957C12.7907 5.39144 12.3879 5.25 12.0566 5.25H4.93164ZM16.7762 7.71996C17.0691 7.42707 17.544 7.42707 17.8369 7.71996L21.5869 11.47C21.8798 11.7629 21.8798 12.2377 21.5869 12.5306L17.8369 16.2806C17.544 16.5735 17.0691 16.5735 16.7762 16.2806C16.4834 15.9877 16.4834 15.5128 16.7762 15.22L19.2447 12.7515H8.30667C7.89246 12.7515 7.55667 12.4157 7.55667 12.0015C7.55667 11.5873 7.89246 11.2515 8.30667 11.2515H19.2472L16.7762 8.78062C16.4834 8.48773 16.4834 8.01285 16.7762 7.71996Z"
+									/>
+								</svg>
+
+								Logout
+							</a>
+						</li>
+					</ul>
+				</aside>
+				<div class="operations">
+					<div class="operations__content">
+						<div class="operations__withdrawal">
+							<h2 class="operations__sidebar_subtitle">Withdrawal</h2>
+							<p class="operations__main_desc">
+								Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+								sint. Velit officia consequat duis enim velit mollit.
+							</p>
+
+							<div class="select">
+								<div class="select__selected">
+									<input
+										type="hidden"
+										class="select_value"
+										name="sel1ected_item__value"
+									/>
+									<button type="button" class="select__item">
+										<span class="select__item__icon select__item__icon--bitcoin">
+											<img src="img/payments/bitcoin.svg" alt="#" />
+										</span>
+										<span class="select__item__info">
+											<span class="select__item__title"> payment system </span>
+											<span class="select__item__name"> Bitcoin </span>
+										</span>
+										<span class="select__item__summ">
+											<span class="select__item__summ_value"> 1.999 </span>
+											<span class="select__item__summ_currency"> BTC </span>
+										</span>
+									</button>
+
+									<span class="select__arrow"></span>
+								</div>
+								<div class="select__list">
+									<input
+										type="serch"
+										class="select__list_search"
+										placeholder="Enter payment system"
+									/>
+									<div class="select__list_content">
+										<p class="not_results hidden">Sorry, not such results</p>
+										<button type="button" class="select__item" value="Bitcoin">
+											<span class="select__item__icon select__item__icon--bitcoin">
+												<img src="img/payments/bitcoin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Bitcoin </span>
+										</button>
+										<button type="button" class="select__item" value="Payeer">
+											<span class="select__item__icon select__item__icon--payeer">
+												<img src="img/payments/binance-coin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Binance coin </span>
+										</button>
+										<button type="button" class="select__item" value="Perfect Money">
+											<span class="select__item__icon select__item__icon--perfectmoney">
+												<img src="img/payments/perfectmoney.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Perfect Money </span>
+										</button>
+										<button type="button" class="select__item" value="Tether">
+											<span class="select__item__icon select__item__icon--tether">
+												<img src="img/payments/tether.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tether </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/neo.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Neo </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/tron.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tron </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin">
+											<span class="select__item__icon select__item__icon--bitcoin">
+												<img src="img/payments/bitcoin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Bitcoin </span>
+										</button>
+										<button type="button" class="select__item" value="Payeer">
+											<span class="select__item__icon select__item__icon--payeer">
+												<img src="img/payments/binance-coin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Binance coin </span>
+										</button>
+										<button type="button" class="select__item" value="Perfect Money">
+											<span class="select__item__icon select__item__icon--perfectmoney">
+												<img src="img/payments/perfectmoney.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Perfect Money </span>
+										</button>
+										<button type="button" class="select__item" value="Tether">
+											<span class="select__item__icon select__item__icon--tether">
+												<img src="img/payments/tether.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tether </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/neo.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Neo </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/tron.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tron </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin">
+											<span class="select__item__icon select__item__icon--bitcoin">
+												<img src="img/payments/bitcoin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Bitcoin </span>
+										</button>
+										<button type="button" class="select__item" value="Payeer">
+											<span class="select__item__icon select__item__icon--payeer">
+												<img src="img/payments/binance-coin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Binance coin </span>
+										</button>
+										<button type="button" class="select__item" value="Perfect Money">
+											<span class="select__item__icon select__item__icon--perfectmoney">
+												<img src="img/payments/perfectmoney.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Perfect Money </span>
+										</button>
+										<button type="button" class="select__item" value="Tether">
+											<span class="select__item__icon select__item__icon--tether">
+												<img src="img/payments/tether.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tether </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/neo.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Neo </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/tron.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tron </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin">
+											<span class="select__item__icon select__item__icon--bitcoin">
+												<img src="img/payments/bitcoin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Bitcoin </span>
+										</button>
+										<button type="button" class="select__item" value="Payeer">
+											<span class="select__item__icon select__item__icon--payeer">
+												<img src="img/payments/binance-coin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Binance coin </span>
+										</button>
+										<button type="button" class="select__item" value="Perfect Money">
+											<span class="select__item__icon select__item__icon--perfectmoney">
+												<img src="img/payments/perfectmoney.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Perfect Money </span>
+										</button>
+										<button type="button" class="select__item" value="Tether">
+											<span class="select__item__icon select__item__icon--tether">
+												<img src="img/payments/tether.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tether </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/neo.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Neo </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/tron.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tron </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin">
+											<span class="select__item__icon select__item__icon--bitcoin">
+												<img src="img/payments/bitcoin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Bitcoin </span>
+										</button>
+										<button type="button" class="select__item" value="Payeer">
+											<span class="select__item__icon select__item__icon--payeer">
+												<img src="img/payments/binance-coin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Binance coin </span>
+										</button>
+										<button type="button" class="select__item" value="Perfect Money">
+											<span class="select__item__icon select__item__icon--perfectmoney">
+												<img src="img/payments/perfectmoney.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Perfect Money </span>
+										</button>
+										<button type="button" class="select__item" value="Tether">
+											<span class="select__item__icon select__item__icon--tether">
+												<img src="img/payments/tether.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tether </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/neo.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Neo </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/tron.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tron </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin">
+											<span class="select__item__icon select__item__icon--bitcoin">
+												<img src="img/payments/bitcoin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Bitcoin </span>
+										</button>
+										<button type="button" class="select__item" value="Payeer">
+											<span class="select__item__icon select__item__icon--payeer">
+												<img src="img/payments/binance-coin.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Binance coin </span>
+										</button>
+										<button type="button" class="select__item" value="Perfect Money">
+											<span class="select__item__icon select__item__icon--perfectmoney">
+												<img src="img/payments/perfectmoney.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Perfect Money </span>
+										</button>
+										<button type="button" class="select__item" value="Tether">
+											<span class="select__item__icon select__item__icon--tether">
+												<img src="img/payments/tether.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tether </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/neo.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Neo </span>
+										</button>
+										<button type="button" class="select__item" value="Bitcoin Cash">
+											<span class="select__item__icon select__item__icon--bcash">
+												<img src="img/payments/tron.svg" alt="#" />
+											</span>
+											<span class="select__item__name"> Tron </span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<label class="input">
+								<picture class="input__icon">
+									<svg
+										width="16"
+										height="16"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M14.4234 2.83323C14.3371 1.72024 13.4046 0.84082 12.2699 0.84082H2.16069C0.969281 0.84082 0 1.8101 0 3.00151V12.9985C0 14.1899 0.969281 15.1592 2.16069 15.1592H13.8393C15.0308 15.1592 16 14.1899 16 12.9985V4.91304C16 3.92404 15.3318 3.08872 14.4234 2.83323ZM2.16069 1.85019H12.2699C12.8192 1.85019 13.2796 2.23694 13.3938 2.75238H2.16069C1.73767 2.75238 1.34297 2.87505 1.00937 3.08601V3.00151C1.00937 2.36668 1.52586 1.85019 2.16069 1.85019ZM13.8393 14.1498H2.16069C1.52586 14.1498 1.00937 13.6333 1.00937 12.9985V4.91304C1.00937 4.27821 1.52586 3.76172 2.16069 3.76172H13.8393C14.4742 3.76172 14.9907 4.27821 14.9907 4.91304V6.67433H11.7725C10.4972 6.67433 9.45968 7.71187 9.45968 8.98715C9.45968 10.2624 10.4972 11.3 11.7725 11.3H14.9906V12.9985C14.9906 13.6333 14.4741 14.1498 13.8393 14.1498ZM14.9906 10.2906H11.7725C11.0538 10.2906 10.4691 9.70588 10.4691 8.98715C10.4691 8.26841 11.0538 7.6837 11.7725 7.6837H14.9906V10.2906Z"
+											fill="rgba(256,256,256,.5)"
+										/>
+									</svg>
+								</picture>
+								<span class="input__info">
+									<span class="input__info-label"> Deposit amount </span>
+									<input
+										type="text"
+										value="3000"
+										min="10000"
+										class="input__info-input"
+									/>
+								</span>
+								<span class="input__info-currency"> BTC </span>
+							</label>
+
+							<h2 class="operations__main_title">Security <span>PASSWOrD</span></h2>
+
+							<div class="auth">
+								<div class="input">
+									<input
+										type="password"
+										name="password"
+										class="input__field"
+										placeholder="Enter password"
+									/>
+									<span class="input__label"> Password </span>
+									<button class="input__toggle_pass"></button>
+									<span class="input__error"> Error message </span>
+								</div>
+								<div class="input">
+									<input
+										type="text"
+										name="2fa_google"
+										class="input__field"
+										placeholder="2FA Google Auth"
+									/>
+									<span class="input__label"> 2FA Settins </span>
+									<span class="input__google_icon">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="#555"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M11.9917 2.74076e-06C15.0068 -0.00201288 17.7626 1.10785 19.8715 2.94225C20.2143 3.24038 20.2315 3.76852 19.9102 4.0898L17.6822 6.31782C17.3988 6.60117 16.9474 6.62457 16.6386 6.36914C15.3771 5.32552 13.762 4.69571 12.0001 4.69566C9.58322 4.69561 7.44295 5.88282 6.11259 7.69753L2.02158 5.3355C4.18481 2.10867 7.86665 0.00276837 11.9917 2.74076e-06ZM1.23717 6.68987L5.32486 9.04988C4.92333 9.95358 4.6957 10.9504 4.69566 11.9999C4.69561 13.0495 4.92309 14.0466 5.32458 14.9506L1.25409 17.3007C0.452109 15.6904 0 13.8872 0 11.9999C4.6875e-05 10.0861 0.447328 8.28601 1.23717 6.68987ZM23.9178 10.6116C23.8711 10.2143 23.5371 9.91359 23.1372 9.91359L13.3044 9.91308C12.8722 9.91308 12.5218 10.2635 12.5218 10.6957V13.8235C12.5218 14.2557 12.8721 14.6062 13.3044 14.6062H18.8144C18.3069 15.927 17.4254 17.0625 16.3031 17.888L18.6435 21.9417C20.9992 20.3453 22.7904 17.9317 23.5793 15.0824C24.0082 13.5332 24.0854 12.0352 23.9178 10.6116ZM12.0001 19.3044C13.0509 19.3043 14.0473 19.0762 14.9498 18.6741L17.2917 22.7304C15.6846 23.5385 13.8878 24 12 24C7.82414 24 4.18355 21.8502 2.03845 18.6551L6.11203 16.3032C7.44145 18.1172 9.5805 19.3044 12.0001 19.3044Z"
+											/>
+										</svg>
+									</span>
+									<span class="input__error"> Error message </span>
+								</div>
+							</div>
+							<button class="btn btn_primary">
+								<svg
+									width="36"
+									height="36"
+									viewBox="0 0 36 36"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect
+										x="0.694444"
+										y="0.694444"
+										width="34.6111"
+										height="34.6111"
+										rx="11.3056"
+										fill="#181818"
+										stroke="url(#paint0_linear)"
+										stroke-width="1.38889"
+									/>
+									<path
+										d="M12.2277 17.5909C12.4399 17.3788 12.6974 17.2728 13.0005 17.2728L13.364 17.2728L13.364 15.0909C13.364 13.6969 13.8638 12.5001 14.8639 11.5001C15.8638 10.5 17.0606 10 18.4547 10C19.8488 10 21.0458 10.5 22.0456 11.5C23.0457 12.5001 23.5455 13.6969 23.5455 15.0909L23.5455 17.2728L23.9091 17.2728C24.2121 17.2728 24.4697 17.3788 24.6818 17.5909C24.894 17.8029 25 18.0605 25 18.3637L25 24.9091C25 25.2121 24.8939 25.4698 24.6818 25.6819C24.4697 25.8939 24.2121 26 23.9091 26L13.0003 26C12.6971 26 12.4397 25.894 12.2274 25.6819C12.0155 25.4698 11.9093 25.2121 11.9093 24.9091L11.9093 18.3636C11.9091 18.0607 12.0155 17.8031 12.2277 17.5909ZM15.5457 17.2728L21.3637 17.2728L21.3637 15.0909C21.3637 14.2879 21.0796 13.6022 20.5114 13.0341C19.9432 12.466 19.2576 12.1819 18.4546 12.1819C17.6514 12.1819 16.966 12.4659 16.3978 13.0341C15.8298 13.6022 15.5457 14.2879 15.5457 15.0909L15.5457 17.2728Z"
+										fill="white"
+									/>
+									<defs>
+										<linearGradient
+											id="paint0_linear"
+											x1="0"
+											y1="0"
+											x2="38.1818"
+											y2="38.7273"
+											gradientUnits="userSpaceOnUse"
+										>
+											<stop stop-color="#2C2C2C" />
+											<stop offset="1" stop-color="#070707" />
+										</linearGradient>
+									</defs>
+								</svg>
+
+								Send a request
+							</button>
+
+							<p class="operations__withdrawal-receive">To receive: 2990 USD</p>
+							<p class="operations__withdrawal-commission">Сommission: 3%</p>
+						</div>
+
+						<div class="operations__decor"></div>
+					</div>
+				</div>
+			</main>
+
+			<!-- my_deposits -->
+			<!--  -->
+			<!--  -->
+			//= tpl/footer.html
+			<!--  -->
+			//= tpl/modals.html
+		</div>
+		<!-- scripts -->
+		<script src="js/libs.min.js"></script>
+		<!-- main scripts -->
+		<script src="js/main.js"></script>
+		<!-- main scripts -->
+		<!-- scripts -->
+	</body>
+</html>
+
+<!-- <input type="phone" required="" pattern="7[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"> -->
