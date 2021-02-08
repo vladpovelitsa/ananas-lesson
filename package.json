@@ -1,7 +1,7 @@
 {
-  "name": "Vlad-Povelitsa-Bundle",
+  "name": "Arthur-Ziegert",
   "version": "1.0.0",
-  "description": "Vlad Povelitsa Bundle",
+  "description": "Arthur Ziegert website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
