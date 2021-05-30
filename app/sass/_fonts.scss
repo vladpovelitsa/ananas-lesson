@@ -1,9 +1,18 @@
 /*fonts*/
 @font-face {
-	font-family: "FontName";
-	src: url("../fonts/FontName/FontName.eot");
-	src: local("Gotham Light Italic"), local("Gotham-LightItalic"),
-		url("../fonts/FontName/FontName.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/FontName/FontName.woff2") format("woff2"), url("../fonts/FontName/FontName.woff") format("woff"),
-		url("../fonts/FontName/FontName.ttf") format("truetype");
+	font-family: "BebasNeue";
+	src: url("../fonts/BebasNeue/BebasNeueRegular.eot"),
+		url("../fonts/BebasNeue/BebasNeueRegular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/BebasNeue/BebasNeueRegular.woff2") format("woff2"),
+		url("../fonts/BebasNeue/BebasNeueRegular.woff") format("woff"),
+		url("../fonts/BebasNeue/BebasNeueRegular.ttf") format("truetype");
+	font-weight: 400;
+}
+
+/*fonts*/
+@font-face {
+	font-family: "Geometria";
+	src: url("../fonts/Geometria/Geometria.eot"), url("../fonts/Geometria/Geometria.woff") format("woff"),
+		url("../fonts/Geometria/Geometria.ttf") format("truetype");
+	font-weight: 400;
 }
