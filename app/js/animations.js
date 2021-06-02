@@ -8,21 +8,21 @@ const animationsSettings = {
  slidesStep: 35,
  breakpoints: [
   {
-   width: 1400,
+   width: 1600,
    settings: {
     maxWidth: 320,
     slidesStep: 25,
    },
   },
   {
-   width: 1100,
+   width: 1199,
    settings: {
     maxWidth: 210,
     slidesStep: 20,
    },
   },
   {
-   width: 600,
+   width: 799,
    settings: {
     maxWidth: 75,
     slidesStep: 10,
@@ -50,12 +50,12 @@ checkBreackpoint(animationsSettings);
 function startAnimation(offsetL, offsetR) {
  tl
   .to('#about', {
-   maxWidth: `calc(100% - ${offsetL}px - ${offsetR}px)`,
+   maxWidth: `calc(100% - ${offsetL * 2}px - ${offsetR}px)`,
    duration: 0.5,
    stagger: 0.5,
   })
   .to('#about', {
-   left: `${offsetL}px`,
+   left: `${offsetL * 2}px`,
    duration: 0.5,
    delay: 0.5,
   });
@@ -71,17 +71,6 @@ function startAnimation(offsetL, offsetR) {
 }
 
 function toNext(current, target, offsetL, offsetR, width) {
- tl
-  .to(current, {
-   maxWidth: `${width}px`,
-   duration: 0.5,
-   stagger: 0.5,
-  })
-
-  .to(current, {
-   right: 'unset',
-   duration: 0,
-  });
  tl.call(
   function () {
    $(current).removeClass('active');
@@ -91,19 +80,31 @@ function toNext(current, target, offsetL, offsetR, width) {
   2
  );
  tl
+  .to(current, {
+   maxWidth: `${width}px`,
+   duration: 0.25,
+   stagger: 0.25,
+  })
+
+  .to(current, {
+   right: 'unset',
+   duration: 0,
+  });
+
+ tl
   .to(target, {
    zIndex: appState.currentSlide + 1,
   })
 
   .to(target, {
    maxWidth: `calc(100% - ${offsetL}px - ${offsetR}px)`,
-   duration: 0.5,
-   stagger: 0.25,
+   duration: 0.25,
+   stagger: 0.15,
   })
   .to(target, {
    left: `${offsetL}px`,
    duration: 0,
-   delay: 0.5,
+   delay: 0.25,
   });
 
  tl.call(
@@ -117,16 +118,18 @@ function toNext(current, target, offsetL, offsetR, width) {
 }
 
 function toPrev(current, target, offsetL, offsetR, width) {
+ tl.call(function () {
+  $(current).removeClass('active');
+ });
  tl
-
   .to(current, {
    left: `unset`,
    duration: 0,
   })
   .to(current, {
    maxWidth: `${width}px`,
-   duration: 0.5,
-   stagger: 0.5,
+   duration: 0.25,
+   stagger: 0.25,
   })
 
   .to(current, {
@@ -139,23 +142,19 @@ function toPrev(current, target, offsetL, offsetR, width) {
    duration: 0,
   });
 
- tl.call(function () {
-  $(current).removeClass('active');
- });
-
  tl
   .to(target, {
    zIndex: appState.currentSlide - 1,
   })
   .to(target, {
    maxWidth: `calc(100% - ${offsetL}px - ${offsetR}px)`,
-   duration: 0.5,
-   stagger: 0.25,
+   duration: 0.25,
+   stagger: 0.15,
   })
   .to(target, {
    left: `${offsetL}px`,
    duration: 0,
-   delay: 0.5,
+   delay: 0.25,
   })
   .to(target, {
    right: `${offsetR}px`,
@@ -168,6 +167,55 @@ function toPrev(current, target, offsetL, offsetR, width) {
  });
 }
 
+function toNextHandler() {
+ console.log('to next');
+ checkBreackpoint(animationsSettings);
+
+ appState.currentSlide == 1
+  ? toNext(
+     '#about',
+     '#environment',
+     appState.currentSettings.slidesStep * 2,
+     appState.currentSettings.slidesStep,
+     appState.currentSettings.maxWidth
+    )
+  : appState.currentSlide == 2
+  ? toNext(
+     '#environment',
+     '#location',
+     appState.currentSettings.slidesStep * 2,
+     0,
+     appState.currentSettings.maxWidth
+    )
+  : '';
+
+ return appState.currentSlide++;
+}
+
+function toPrevHandler() {
+ console.log('to prev');
+
+ checkBreackpoint(animationsSettings);
+ appState.currentSlide == 2
+  ? toPrev(
+     '#environment',
+     '#about',
+     appState.currentSettings.slidesStep * 2,
+     appState.currentSettings.slidesStep * 2,
+     appState.currentSettings.maxWidth
+    )
+  : appState.currentSlide == 3
+  ? toPrev(
+     '#location',
+     '#environment',
+     appState.currentSettings.slidesStep * 2,
+     appState.currentSettings.slidesStep,
+     appState.currentSettings.maxWidth
+    )
+  : '';
+ return appState.currentSlide--;
+}
+
 startAnimation(
  appState.currentSettings.slidesStep,
  appState.currentSettings.slidesStep * 2
@@ -175,53 +223,16 @@ startAnimation(
 
 document.addEventListener('click', () => {
  if (
-  event.target.classList.contains('main__button--next') &&
+  event.target.classList.contains('main__hidden_btn--next') &&
   document.querySelectorAll('.main__item').length > appState.currentSlide
  ) {
-  checkBreackpoint(animationsSettings);
-
-  appState.currentSlide == 1
-   ? toNext(
-      '#about',
-      '#environment',
-      appState.currentSettings.slidesStep * 2,
-      appState.currentSettings.slidesStep,
-      appState.currentSettings.maxWidth
-     )
-   : appState.currentSlide == 2
-   ? toNext(
-      '#environment',
-      '#location',
-      appState.currentSettings.slidesStep * 3,
-      0,
-      appState.currentSettings.maxWidth
-     )
-   : '';
-  return appState.currentSlide++;
+  toNextHandler();
  }
  if (
-  event.target.classList.contains('main__button--prev') &&
+  event.target.classList.contains('main__hidden_btn--prev') &&
   0 < appState.currentSlide
  ) {
-  checkBreackpoint(animationsSettings);
-  appState.currentSlide == 2
-   ? toPrev(
-      '#environment',
-      '#about',
-      appState.currentSettings.slidesStep,
-      appState.currentSettings.slidesStep * 2,
-      appState.currentSettings.maxWidth
-     )
-   : appState.currentSlide == 3
-   ? toPrev(
-      '#location',
-      '#environment',
-      appState.currentSettings.slidesStep * 2,
-      appState.currentSettings.slidesStep,
-      appState.currentSettings.maxWidth
-     )
-   : '';
-  return appState.currentSlide--;
+  toPrevHandler();
  }
 });
 
@@ -237,7 +248,9 @@ function parallax(event) {
  border.style.transform = 'translate(' + -translateX + 'px, 0';
 }
 
-document.querySelector('.main__item').addEventListener('mousemove', parallax);
+document.addEventListener('DOMContentLoaded', function (event) {
+ document.querySelector('.main__item').addEventListener('mousemove', parallax);
+});
 
 function swipeHandler() {
  // настраиваем переключение слайда по свайпу
@@ -258,46 +271,9 @@ function swipeHandler() {
   function getEnd() {
    mouseEnd = window.event.clientX;
    if (parseInt(mouseStart) - parseInt(mouseEnd) <= -100 && mouseStart) {
-    checkBreackpoint(animationsSettings);
-    appState.currentSlide == 2
-     ? toPrev(
-        '#environment',
-        '#about',
-        appState.currentSettings.slidesStep,
-        appState.currentSettings.slidesStep * 2,
-        appState.currentSettings.maxWidth
-       )
-     : appState.currentSlide == 3
-     ? toPrev(
-        '#location',
-        '#environment',
-        appState.currentSettings.slidesStep * 2,
-        appState.currentSettings.slidesStep,
-        appState.currentSettings.maxWidth
-       )
-     : '';
-    return appState.currentSlide--;
+    toPrevHandler();
    } else if (parseInt(mouseStart) - parseInt(mouseEnd) >= 100 && mouseStart) {
-    checkBreackpoint(animationsSettings);
-
-    appState.currentSlide == 1
-     ? toNext(
-        '#about',
-        '#environment',
-        appState.currentSettings.slidesStep * 2,
-        appState.currentSettings.slidesStep,
-        appState.currentSettings.maxWidth
-       )
-     : appState.currentSlide == 2
-     ? toNext(
-        '#environment',
-        '#location',
-        appState.currentSettings.slidesStep * 3,
-        0,
-        appState.currentSettings.maxWidth
-       )
-     : '';
-    return appState.currentSlide++;
+    toNextHandler();
    } else {
     return;
    }
@@ -316,46 +292,9 @@ function swipeHandler() {
   document.addEventListener('touchend', function (e) {
    var mouseEnd = window.event.changedTouches[0].screenX;
    if (parseInt(mouseStart) - parseInt(mouseEnd) <= -50 && mouseStart) {
-    checkBreackpoint(animationsSettings);
-    appState.currentSlide == 2
-     ? toPrev(
-        '#environment',
-        '#about',
-        appState.currentSettings.slidesStep,
-        appState.currentSettings.slidesStep * 2,
-        appState.currentSettings.maxWidth
-       )
-     : appState.currentSlide == 3
-     ? toPrev(
-        '#location',
-        '#environment',
-        appState.currentSettings.slidesStep * 2,
-        appState.currentSettings.slidesStep,
-        appState.currentSettings.maxWidth
-       )
-     : '';
-    return appState.currentSlide--;
+    toPrevHandler();
    } else if (parseInt(mouseStart) - parseInt(mouseEnd) >= 100 && mouseStart) {
-    checkBreackpoint(animationsSettings);
-
-    appState.currentSlide == 1
-     ? toNext(
-        '#about',
-        '#environment',
-        appState.currentSettings.slidesStep * 2,
-        appState.currentSettings.slidesStep,
-        appState.currentSettings.maxWidth
-       )
-     : appState.currentSlide == 2
-     ? toNext(
-        '#environment',
-        '#location',
-        appState.currentSettings.slidesStep * 3,
-        0,
-        appState.currentSettings.maxWidth
-       )
-     : '';
-    return appState.currentSlide++;
+    toNextHandler();
    } else {
     return;
    }
@@ -363,3 +302,43 @@ function swipeHandler() {
  }
 }
 swipeHandler();
+
+document
+ .querySelector('.main__hidden_btn--prev')
+ .addEventListener('mousemove', function () {
+  document.querySelector('.main__hidden_btn--prev span').style.top =
+   event.clientY + 'px';
+  document.querySelector('.main__hidden_btn--prev span').style.left =
+   event.clientX + 'px';
+ });
+document
+ .querySelector('.main__hidden_btn--next')
+ .addEventListener('mousemove', function () {
+  document.querySelector('.main__hidden_btn--next span').style.top =
+   event.clientY + 'px';
+  document.querySelector('.main__hidden_btn--next span').style.left =
+   event.clientX + 'px';
+ });
+
+document.querySelector('#about .main__next').addEventListener('click', () => {
+ toNext(
+  '#about',
+  '#environment',
+  appState.currentSettings.slidesStep * 2,
+  appState.currentSettings.slidesStep,
+  appState.currentSettings.maxWidth
+ );
+ return appState.currentSlide++;
+});
+document
+ .querySelector('#environment .main__next')
+ .addEventListener('click', () => {
+  toNext(
+   '#environment',
+   '#location',
+   appState.currentSettings.slidesStep * 2,
+   0,
+   appState.currentSettings.maxWidth
+  );
+  return appState.currentSlide++;
+ });
