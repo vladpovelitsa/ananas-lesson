@@ -1,7 +1,7 @@
 {
-  "name": "Arthur-Ziegert",
+  "name": "project_mame",
   "version": "1.0.0",
-  "description": "Arthur Ziegert website",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

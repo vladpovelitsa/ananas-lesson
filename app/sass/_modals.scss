@@ -18,37 +18,7 @@
 			transform: scale(1);
 		}
 	}
-	&#notify {
-		&_success {
-			.notify {
-				&_heading {
-					background: var(--text-gray-gradient);
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-				}
-			}
-		}
-		&_error {
-			.notify {
-				&_heading {
-					color: var(--ui-red);
-				}
-			}
-			.modal_content {
-				border-color: var(--ui-red);
-			}
-		}
-		&_warn {
-			.notify {
-				&_heading {
-					color: var(--primary-yellow);
-				}
-			}
-			.modal_content {
-				border-color: var(--primary-yellow);
-			}
-		}
-	}
+
 }
 .modal_content {
 	width: 90%;

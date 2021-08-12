@@ -56,7 +56,6 @@ gulp.task('scripts', function (done) {
    'app/libs/slick-carousel/slick/slick.min.js',
    'app/libs/lightbox/dist/js/lightbox.min.js',
    'app/libs/jquery.maskedinput.js',
-   'app/libs/gsap-public/minified/gsap.min.js',
   ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
@@ -90,6 +89,7 @@ gulp.task('styles', function (done) {
 gulp.task('serve', function (done) {
  browserSync.init({
   server: 'app/',
+  startPath: 'sitemap.html',
  });
 
  gulp.watch('app/sass/*.scss', gulp.series('sass', 'html'));
@@ -147,7 +147,7 @@ gulp.task('buildFonts', function (done) {
 });
 
 gulp.task(
- 'finish',
+ 'build',
  gulp.series('imagemin', 'html', 'buildCss', 'buildJs', 'buildFonts')
 );
 
