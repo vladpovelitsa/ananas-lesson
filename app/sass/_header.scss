@@ -1,0 +1,70 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 27px;
+	padding-bottom: 31px;
+	position: absolute;
+	width: 100%;
+	z-index: 99;
+	nav {
+		margin-left: auto;
+	}
+	.nav {
+		list-style: none;
+		display: flex;
+
+		li {
+			margin: 0 17px;
+			font-size: 16px;
+			a {
+				color: #181D24;
+				&:hover {
+					color: #B0855F;
+				}
+			}
+		}
+	}
+	&_phone{
+		display: block;
+		margin-left: auto;
+		color: #181D24;
+		font-size: 16px;
+		&:hover {
+			color: #B0855F;
+		}
+		&_icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 56px;
+			height: 56px;
+			border-radius: 50%;
+			border: 1px solid #B0855F;
+			margin-left: 9px;
+			position: relative;
+			z-index: 5;
+			&:before {
+				content: "";
+				display: block;
+				border-radius: 50%;
+				width: 46px;
+				height: 46px;
+				background: #B0855F;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				z-index: -1;
+				transition: .3s;
+			}
+			&:hover {
+				&:before {
+					width: 52px;
+				    height: 52px;
+				}
+				
+			}
+		}
+	}
+}

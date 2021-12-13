@@ -1,28 +1,618 @@
 <!DOCTYPE html>
 <html lang="ru">
  <head>
-  <title>Project name</title>
+  <title>Tolstoy</title>
   <meta charset="utf-8" />
   <link rel="shortcut icon" href="fav.svg" type="image/x-icon" />
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Philosopher&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/libs.min.css" />
   <link rel="stylesheet" type="text/css" href="css/style.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
  </head>
  <body>
   <div class="wrapper">
-   <h1
-    style="
-     font-size: 36px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-		 margin: 0;
-    "
-   >
-    Started new project...
-   </h1>
+    <header class="header center">
+        <a href="#" class="logo">
+            <img src="img/logo_gold.svg" alt="">
+        </a> 
+        <nav>
+            <ul class="nav">
+                <li>
+                    <a href="">
+                        Выбор апартамента
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        О проекте
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Инвесторам
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Условия покупки
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Документы
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="tel:78002221068" class="header_phone">
+            8 800 222 10 68
+        </a>
+        <a href="tel:78002221068" class="header_phone_icon">
+            <img src="img/phone.svg" alt="">
+        </a>
+    </header>
+    <section class="offer center">
+        <picture class="offer_pic">
+            <source srcset="img/image1.webp" type="image/webp">
+           <img src="img/image1.jpg" alt=""> 
+        </picture>
+        <div class="offer_title">
+            <h2>
+                Ваша резиденция на берегу моря
+            </h2>
+            <h1>
+                граф Толстой
+            </h1>
+        </div>
+        <div class="offer_prev">
+            <p class="offer_desc">
+                Получать удовольствие от истинной изысканности и роскоши присуще не каждому-это этюд для избранных. Позвольте себе побыть одним из таких избранных
+            </p>
+            <button class="btn_filled">
+                Выбрать резиденцию
+            </button>
+            <button class="btn_arrow">
+                Скачать буклет <svg width="59" height="50" viewBox="0 0 59 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="circle" d="M11.7955 35.3541C11.5452 35.4709 11.4365 35.7686 11.5581 36.0165C13.9255 40.8393 17.7863 44.7756 22.5726 47.2354C27.5072 49.7715 33.1453 50.594 38.5988 49.5734C44.0523 48.5528 49.0114 45.7471 52.695 41.5982C56.3785 37.4492 58.5773 32.1928 58.945 26.6568C59.3127 21.1209 57.8284 15.6198 54.7259 11.0202C51.6234 6.42052 47.079 2.98359 41.8084 1.2507C36.5378 -0.482194 30.8404 -0.412585 25.6137 1.44856C20.5442 3.25375 16.1967 6.64488 13.2123 11.1122C13.0589 11.3418 13.1273 11.6513 13.3599 11.8001V11.8001C13.5926 11.9489 13.9013 11.8806 14.0549 11.6511C16.9196 7.37068 21.0887 4.12136 25.9492 2.39062C30.9668 0.603918 36.4362 0.537094 41.496 2.20067C46.5558 3.86425 50.9185 7.1637 53.8969 11.5794C56.8753 15.995 58.3002 21.276 57.9472 26.5906C57.5942 31.9051 55.4834 36.9513 51.9472 40.9342C48.4109 44.9172 43.6502 47.6107 38.4148 48.5904C33.1795 49.5702 27.7669 48.7806 23.0297 46.346C18.4408 43.9876 14.7381 40.2155 12.4646 35.5938C12.3427 35.346 12.0457 35.2374 11.7955 35.3541V35.3541Z" fill="#B0855F"/>
+                <path class="arrow" d="M27.3455 24.5455L21.5273 20L32 25L21.5273 30L27.3455 25.4545H-9.53674e-07V24.5455H27.3455Z" fill="#B0855F"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+    <section class="quote center">
+        <div class="quote_text">
+            <span class="quote_text_decor">
+                ”
+            </span>
+            Мы <span class="gold_text"> более 30 лет </span> активно разрабатываем проекты, архитектуру <br>
+            и дизайн в разных направлениях и стилях в <span class="gold_text">Италии.</span>  теперь мы применяем свой опыт и в России. Здания комплекса были выполнены нами во французском стиле <span class="gold_text">Осман (Haussmann).</span> стиль был характерен для парижских домов середины 19-го века
+        </div>
+        <div class="quote_author">
+            <div class="quote_author_main">
+                <p class="quote_author_name gold_text">
+                    Фабио Филиппини
+                </p>
+                <p class="quote_author_position">
+                    Глава INTERNI Consulting Group
+                </p>
+            </div>
+             <picture class="quote_author_photo">
+                 <img src="img/photo_fabio.png" alt="">
+                 <source srcset="img/photo_fabio.webp" type="image/webp">
+             </picture>
+        </div>
+    </section>
+    <section class="about center">
+        <h2 class="about_title">
+            О проекте
+        </h2>
+        <div class="about_main">
+            <div class="about_desc">
+                <div class="about_desc_item">
+                    <picture class="about_photo">
+                         <source srcset="img/about_photo.webp" type="image/webp">
+                         <img src="img/about_photo.jpg" alt="">
+                    </picture>
+                         <p class="about_desc_text">
+                         В своем известном произведении «Анна Каренина» великий русский писатель и мыслитель Лев Толстой сказал: «Нет таких условий, к которым человек не мог бы привыкнуть, в особенности если он видит, что все окружающие его живут так же». А задача команды проекта «Граф Толстой» заключается в том, чтобы вы привыкли исключительно к роскоши! 
+                       </p>
+                   <p class="about_desc_position">
+                         Руководитель отдела продаж
+                  </p>
+                   <p class="about_desc_name gold_text">
+                         Ренат Назмеев 
+                  </p>
+                </div>
+                <div class="about_desc_item">
+                    <picture class="about_photo">
+                         <source srcset="img/about_photo.webp" type="image/webp">
+                         <img src="img/about_photo.jpg" alt="">
+                    </picture>
+                         <p class="about_desc_text">
+                         В своем известном произведении «Анна Каренина» великий русский писатель и мыслитель Лев Толстой сказал: «Нет таких условий, к которым человек не мог бы привыкнуть, в особенности если он видит, что все окружающие его живут так же». А задача команды проекта «Граф Толстой» заключается в том, чтобы вы привыкли исключительно к роскоши! 
+                       </p>
+                   <p class="about_desc_position">
+                         Руководитель отдела продаж
+                  </p>
+                   <p class="about_desc_name gold_text">
+                         Ренат Назмеев 
+                  </p>
+                </div>
+                <div class="about_desc_item">
+                    <picture class="about_photo">
+                         <source srcset="img/about_photo.webp" type="image/webp">
+                         <img src="img/about_photo.jpg" alt="">
+                    </picture>
+                         <p class="about_desc_text">
+                         В своем известном произведении «Анна Каренина» великий русский писатель и мыслитель Лев Толстой сказал: «Нет таких условий, к которым человек не мог бы привыкнуть, в особенности если он видит, что все окружающие его живут так же». А задача команды проекта «Граф Толстой» заключается в том, чтобы вы привыкли исключительно к роскоши! 
+                       </p>
+                   <p class="about_desc_position">
+                         Руководитель отдела продаж
+                  </p>
+                   <p class="about_desc_name gold_text">
+                         Ренат Назмеев 
+                  </p>
+                </div>
+            </div>
+
+            <div class="about_slider">
+                <div class="about_slider_item">
+                    <picture class="about_slider_photo">
+                        <source srcset="img/about_slider1.webp" type="image/webp">
+                        <img src="img/about_slider1.jpg" alt="">
+                    </picture>
+                    <h3 class="about_slider_title">
+                        «Граф Толстой» — это комплекс резиденций, состоящий из двух корпусов. 
+                    </h3>
+                    <p class="about_slider_text">
+                        Комплекс находится в одном из самых престижных районов города, на первой береговой линии Чёрного моря. Расположение совмещает в себе первозданный природный ландшафт и современную инфраструктуру. Здесь в гармонии с горными пейзажами, чистым небом и морским ветром, вы можете отдохнуть от городской суеты и набраться вдохновения для новых свершений. 
+                    </p>
+                </div>
+                <div class="about_slider_item">
+                    <picture class="about_slider_photo">
+                        <source srcset="img/about_slider2.webp" type="image/webp">
+                        <img src="img/about_slider2.jpg" alt="">
+                    </picture>
+                    <h3 class="about_slider_title">
+                        «Граф Толстой» — это комплекс резиденций, состоящий из двух корпусов. 
+                    </h3>
+                    <p class="about_slider_text">
+                        Комплекс находится в одном из самых престижных районов города, на первой береговой линии Чёрного моря. Расположение совмещает в себе первозданный природный ландшафт и современную инфраструктуру. Здесь в гармонии с горными пейзажами, чистым небом и морским ветром, вы можете отдохнуть от городской суеты и набраться вдохновения для новых свершений. 
+                    </p>
+                </div>
+                <div class="about_slider_item">
+                    <picture class="about_slider_photo">
+                        <source srcset="img/about_slider3.webp" type="image/webp">
+                        <img src="img/about_slider3.jpg" alt="">
+                    </picture>
+                    <h3 class="about_slider_title">
+                        «Граф Толстой» — это комплекс резиденций, состоящий из двух корпусов. 
+                    </h3>
+                    <p class="about_slider_text">
+                        Комплекс находится в одном из самых престижных районов города, на первой береговой линии Чёрного моря. Расположение совмещает в себе первозданный природный ландшафт и современную инфраструктуру. Здесь в гармонии с горными пейзажами, чистым небом и морским ветром, вы можете отдохнуть от городской суеты и набраться вдохновения для новых свершений. 
+                    </p>
+                </div>
+            </div>
+            <button class="btn_arrow">
+                Скачать буклет <svg width="59" height="50" viewBox="0 0 59 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="circle" d="M11.7955 35.3541C11.5452 35.4709 11.4365 35.7686 11.5581 36.0165C13.9255 40.8393 17.7863 44.7756 22.5726 47.2354C27.5072 49.7715 33.1453 50.594 38.5988 49.5734C44.0523 48.5528 49.0114 45.7471 52.695 41.5982C56.3785 37.4492 58.5773 32.1928 58.945 26.6568C59.3127 21.1209 57.8284 15.6198 54.7259 11.0202C51.6234 6.42052 47.079 2.98359 41.8084 1.2507C36.5378 -0.482194 30.8404 -0.412585 25.6137 1.44856C20.5442 3.25375 16.1967 6.64488 13.2123 11.1122C13.0589 11.3418 13.1273 11.6513 13.3599 11.8001V11.8001C13.5926 11.9489 13.9013 11.8806 14.0549 11.6511C16.9196 7.37068 21.0887 4.12136 25.9492 2.39062C30.9668 0.603918 36.4362 0.537094 41.496 2.20067C46.5558 3.86425 50.9185 7.1637 53.8969 11.5794C56.8753 15.995 58.3002 21.276 57.9472 26.5906C57.5942 31.9051 55.4834 36.9513 51.9472 40.9342C48.4109 44.9172 43.6502 47.6107 38.4148 48.5904C33.1795 49.5702 27.7669 48.7806 23.0297 46.346C18.4408 43.9876 14.7381 40.2155 12.4646 35.5938C12.3427 35.346 12.0457 35.2374 11.7955 35.3541V35.3541Z" fill="#B0855F"/>
+                <path class="arrow" d="M27.3455 24.5455L21.5273 20L32 25L21.5273 30L27.3455 25.4545H-9.53674e-07V24.5455H27.3455Z" fill="#B0855F"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section class="pluses center">
+        <div class="pluses_item">
+            <p class="pluses_counter">
+                360
+            </p>
+            <p class="pluses_details">
+                площадь резиденций <br>
+                от 28 до 142 м2
+            </p>
+            <p class="pluses_label">
+                резиденций
+            </p>
+        </div>
+        <div class="pluses_item">
+            <p class="pluses_counter">
+                150
+            </p>
+            <p class="pluses_details">
+                5 минут на машине до центра <br>
+                20 минут до аэропорта
+            </p>
+            <p class="pluses_label">
+                парковочных мест
+            </p>
+        </div>
+        <div class="pluses_item">
+            <p class="pluses_counter">
+                7
+            </p>
+            <p class="pluses_details">
+                площадь резиденций <br>
+                от 28 до 142 м2
+            </p>
+            <p class="pluses_label">
+                всего 7 этажей
+            </p>
+        </div>
+    </section>
+
+    <section class="location center">
+        <h2 class="location_title">
+            О проекте
+        </h2>
+        <div class="location_main">
+            <div class="location_desc">
+                <div class="location_info">
+                <p class="location_counter">
+                    30
+                </p>
+                <p class="location_details">
+                    метров
+                </p>
+                <p class="location_label">
+                    до пляжа
+                </p>
+           </div>
+                <div class="location_info">
+                <p class="location_counter">
+                    7
+                </p>
+                <p class="location_details">
+                    метров
+                </p>
+                <p class="location_label">
+                    до пляжа
+                </p>
+           </div>
+                <div class="location_info">
+                <p class="location_counter">
+                    22
+                </p>
+                <p class="location_details">
+                    метров
+                </p>
+                <p class="location_label">
+                    до пляжа
+                </p>
+           </div>
+            </div>
+            
+        <div class="location_slider">
+            <div class="location_slider_item">
+               <picture class="location_slider_photo">
+                  <source srcset="img/location1.webp" type="image/webp">
+                   <img src="img/location1.jpg" alt="">
+              </picture>
+              <p class="location_slider_text">
+                   Мы разрабатывали концепцию инфраструктуры таким образом, чтобы ваша жизнь была максимально комфортной. В пешей доступности вы сможете найти все то, что необходимо: магазины, почта, банки, детские сады и школы. Комплекс возведен на курортной набережной. Здесь расположены исторические памятники, культурные центры и рестораны. В шаговой доступности находится парк “Ореховая Роща”, где при желании, можно прогуляться и полюбоваться красотой природы. 
+ 
+              </p>
+            </div> 
+            <div class="location_slider_item">
+               <picture class="location_slider_photo">
+                  <source srcset="img/location2.webp" type="image/webp">
+                   <img src="img/location2.jpg" alt="">
+              </picture>
+              <p class="location_slider_text">
+                   Мы разрабатывали концепцию инфраструктуры таким образом, чтобы ваша жизнь была максимально комфортной. В пешей доступности вы сможете найти все то, что необходимо: магазины, почта, банки, детские сады и школы. Комплекс возведен на курортной набережной. Здесь расположены исторические памятники, культурные центры и рестораны. В шаговой доступности находится парк “Ореховая Роща”, где при желании, можно прогуляться и полюбоваться красотой природы. 
+            
+              </p>
+            </div>
+            <div class="location_slider_item">
+               <picture class="location_slider_photo">
+                  <source srcset="img/location3.webp" type="image/webp">
+                   <img src="img/location3.jpg" alt="">
+              </picture>
+              <p class="location_slider_text">
+                   Мы разрабатывали концепцию инфраструктуры таким образом, чтобы ваша жизнь была максимально комфортной. В пешей доступности вы сможете найти все то, что необходимо: магазины, почта, банки, детские сады и школы. Комплекс возведен на курортной набережной. Здесь расположены исторические памятники, культурные центры и рестораны. В шаговой доступности находится парк “Ореховая Роща”, где при желании, можно прогуляться и полюбоваться красотой природы. 
+            
+              </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="choose center">
+        <h2 class="choose_title">
+            Выберите резиденцию
+        </h2>
+        <picture>
+            <source srcset="img/choose_house.webp" type="image/webp">
+             <img src="img/choose_house.jpg" alt="">
+        </picture>
+    </section>
+
+    <section class="booklet center">
+        <h2 class="booklet_title">
+            Получите буклет
+        </h2>
+        <div class="booklet_main">
+            <div class="booklet_desc">
+                <p class="booklet_info">
+                    Расположение корпусов, планировки и подробная информация о комплексе резиденций «Граф Толстой» в нашем pdf-буклете
+                </p>
+                <picture class="booklet_photo">
+                    <source srcset="img/Mockup_HorizontalA5_Brochure_1 1.webp" type="image/webp">
+                    <img src="img/Mockup_HorizontalA5_Brochure_1 1.png" alt="">
+                </picture>
+            </div>
+            <form class="booklet_form">
+                <legend class="booklet_form_title">
+                    Заполните форму и получите буклет
+                </legend>
+                <label class="booklet_form_field">
+                  <input type="text" name="name">  
+                  <span>Имя</span>
+                </label>
+                <label class="booklet_form_field">
+                  <input type="tel" name="phone">  
+                  <span>Телефон</span>
+                </label>
+                <label class="booklet_form_field">
+                  <input type="email" name="email">  
+                  <span>Email</span>
+                </label>
+                <p class="booklet_form_text">
+                    Нажимая кнопку, Вы даете согласие на обработку персональных данных и потверждаете, что ознакомились с 
+                    <a href="" class="booklet_form_policy">
+                        Положением об обработке персональных данных
+                    </a> 
+                </p>
+                <button class="btn_filled">
+                    Получить буклет
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="architecture center">
+        <h2 class="architecture_title">
+            Архитектура
+        </h2>
+        <div class="architecture_main">
+            <p class="architecture_main_text">
+                Благодаря единому архитектурному стилю, комплекс гармонично вписался в пейзаж курортной Анапы. Архитекторы вдохновлялись стилем Лазурного берега и стремились воссоздать атмосферу Ривьеры.
+            </p>
+            <picture class="architecture_main_pic">
+                <source srcset="img/architecture1.webp" type="image/webp">
+                <img src="img/architecture1.jpg" alt="">
+            </picture>
+        </div>
+        <div class="architecture_quote">
+            <p class="architecture_quote_main">
+                Фасады комплекса выполнены в стилистике <span class="gold_text"> Haussmann.</span>  Типичный парижский стиль <span class="gold_text">архитектуры XIX века</span>, который до сих пор определяет <span class="gold_text">Париж</span>, и чья непреходящая привлекательность сделала этот город одним из самых посещаемых и любимых городов мира.
+            </p>
+            <p class="architecture_quote_desc">
+                Этот стиль получил свое название в честь градостроителя Georges Eugène Haussmann, преобразившего в середине XIX века центр Парижа и определившего его современный облик.
+            </p>
+        </div>
+        <div class="architecture_grid">
+            <div class="architecture_grid_item">
+                <div class="architecture_grid_text">
+                    <h3 class="architecture_grid_title">
+                        Архитектура от итальянского бюро INTERNI Consulting Group 
+                    </h3>
+                    <p class="architecture_grid_desc">
+                        С белоснежными фасадами, подчеркивающими фактуру материалов, контрастируют тёмные кованые элементы. Широкие панорамные окна с одной стороны отражают блеск морской глади, с другой — открывают вид на горы и море. Вы сможете окунуться в атмосферу, свойственную Сен-Тропе 60-х годов, где нет места мимолетным и сиюминутным трендам, наоборот, точкой отсчета становятся аутентичность и подлинные ценности. 
+                    </p>
+                </div>
+                <picture class="architecture_grid_pic">
+                    <source srcset="img/architecture2.webp" type="image/webp">
+                    <img src="img/architecture2.jpg" alt="">
+                </picture>
+            </div>
+            <div class="architecture_grid_item">
+                <div class="architecture_grid_text">
+                    <h3 class="architecture_grid_title">
+                        Эксклюзивные планировочные решения
+                    </h3>
+                    <p class="architecture_grid_desc">
+                        Верхние этажи зданий представлены в виде мансард, которые добавляют фасаду динамичность, а люкарны увеличивают пространство резиденций на последних этажах. Так же для дополнения элегантного образа были использованы элементы классической европейской архитектуры.  Фасады домов выходят на современную благоустроенную набережную, образуя с ней единый сбалансированный ансамбль. 
+                    </p>
+                </div>
+                <picture class="architecture_grid_pic">
+                    <source srcset="img/architecture4.webp" type="image/webp">
+                    <img src="img/architecture4.jpg" alt="">
+                </picture>
+            </div>
+            <div class="architecture_grid_item">
+                <div class="architecture_grid_text">
+                    <h3 class="architecture_grid_title">
+                        Уникальное исполнение фасадов зданий
+                    </h3>
+                    <p class="architecture_grid_desc">
+                        С белоснежными фасадами, подчеркивающими фактуру материалов, контрастируют тёмные кованые элементы. Широкие панорамные окна с одной стороны отражают блеск морской глади, с другой — открывают вид на горы и море. Вы сможете окунуться в атмосферу, свойственную Сен-Тропе 60-х годов, где нет места мимолетным и сиюминутным трендам, наоборот, точкой отсчета становятся аутентичность и подлинные ценности.  
+                    </p>
+                </div>
+                <picture class="architecture_grid_pic">
+                    <source srcset="img/architecture3.webp" type="image/webp">
+                    <img src="img/architecture3.jpg" alt="">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="lobby center">
+        <h2 class="lobby_title">
+            Лобби
+        </h2>
+        <div class="lobby_slider">
+            <div class="lobby_slider_item">
+                <p class="lobby_slider_text">
+                    В комплексе резиденций «Граф Толстой» приятные впечатления начинаются уже на пороге парадной. Попадая в холл, вы оказываетесь в просторном, уютном и светлом помещении. В лобби расположена стойка ресепшен и уютный зал для ожидания. Интерьер холла соответствует внешней архитектуре домов: светлые и темные поверхности лобби контрастируют друг с другом так же, как контрастируют элементы фасада. Интерьер сочетает в себе роскошь и лаконичность.                 </p>
+                <picture class="lobby_slider_pic">
+                    <source srcset="img/lobby1.webp" type="image/webp">
+                    <img src="img/lobby1.jpg" alt="">
+                </picture>
+            </div>
+            <div class="lobby_slider_item">
+                <p class="lobby_slider_text">
+                    В комплексе резиденций «Граф Толстой» приятные впечатления начинаются уже на пороге парадной. Попадая в холл, вы оказываетесь в просторном, уютном и светлом помещении. В лобби расположена стойка ресепшен и уютный зал для ожидания. Интерьер холла соответствует внешней архитектуре домов: светлые и темные поверхности лобби контрастируют друг с другом так же, как контрастируют элементы фасада. Интерьер сочетает в себе роскошь и лаконичность. 
+                </p>
+                <picture class="lobby_slider_pic">
+                    <source srcset="img/lobby2.webp" type="image/webp">
+                    <img src="img/lobby2.jpg" alt="">
+                </picture>
+            </div>
+            <div class="lobby_slider_item">
+                <p class="lobby_slider_text">
+                    В комплексе резиденций «Граф Толстой» приятные впечатления начинаются уже на пороге парадной. Попадая в холл, вы оказываетесь в просторном, уютном и светлом помещении. В лобби расположена стойка ресепшен и уютный зал для ожидания. Интерьер холла соответствует внешней архитектуре домов: светлые и темные поверхности лобби контрастируют друг с другом так же, как контрастируют элементы фасада. Интерьер сочетает в себе роскошь и лаконичность. 
+                </p>
+                <picture class="lobby_slider_pic">
+                    <source srcset="img/lobby3.webp" type="image/webp">
+                    <img src="img/lobby3.jpg" alt="">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="engineer center">
+        <h2 class="engineer_title">
+            Инженерные <br>
+            системы
+        </h2>
+        <div class="engineer_main">
+            <picture class="engineer_main_pic">
+                <source srcset="img/engineer1.webp" type="image/webp">
+                <img src="img/engineer1.jpg" alt="">
+            </picture>
+            <div class="engineer_text">
+                <h3 class="engineer_text_title">
+                    БЕЗОПАСНОСТЬ <span class="gold_text">24 часа</span>
+                </h3>
+                <div class="engineer_desc clearfix">
+                    <p>
+                        Организация круглосуточного видеонаблюдения позволит поддерживать высокий уровень безопасности гостей
+                    </p>
+                    <p>
+                        и персонала в комплексе резиденций «Граф Толстой». Помещения будут оснащены пожарной сигнализацией, в резиденциях будут установлены индивидуальные системы пожаротушения. 
+                    </p>
+                        <picture class="engineer_desc_pic">
+                          <source srcset="img/engineer2.webp" type="image/webp">
+                               <img src="img/engineer2.jpg" alt="">
+                        </picture>
+                    <p>
+                        Мы постарались продумать технологические и инженерные решения так, чтобы наполнить вашу жизнь максимальным комфортом и гармонией.
+
+                    </p>
+                    <ul class="engineer_list">
+                        <li>
+                            тихие скоростные лифты
+                        </li>
+                        <li>
+                            индивидуальный тепловой пункт
+                        </li>
+                        <li>
+                            оптоволоконная линия со скоростью передачи данных
+                        </li>
+                        <li>
+                            мультизональные системы кондиционирования
+                        </li>
+                        <li>
+                            система видеонаблюдения по периметру, в парадных холлах и паркинге
+                        </li>
+                        <li>
+                            пожарная сигнализация и индивидуальные системы пожаротушения
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="condition center">
+        <h2 class="condition_title">
+            Условия <br> покупки
+        </h2>
+        <div class="condition_main">
+            <div class="condition_item">
+                <h3 class="condition_info">
+                    Скидки при 100% оплате
+                </h3>
+                <p class="condition_desc">
+                    При единовременной оплате предоставляется скидка 5%
+                </p>
+                <p class="condition_label">
+                    При единовременной оплате предоставляется скидка 5%
+                </p>
+                <button class="btn_arrow">
+                    Узнать подробнее <svg width="59" height="50" viewBox="0 0 59 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="circle" d="M11.7955 35.3541C11.5452 35.4709 11.4365 35.7686 11.5581 36.0165C13.9255 40.8393 17.7863 44.7756 22.5726 47.2354C27.5072 49.7715 33.1453 50.594 38.5988 49.5734C44.0523 48.5528 49.0114 45.7471 52.695 41.5982C56.3785 37.4492 58.5773 32.1928 58.945 26.6568C59.3127 21.1209 57.8284 15.6198 54.7259 11.0202C51.6234 6.42052 47.079 2.98359 41.8084 1.2507C36.5378 -0.482194 30.8404 -0.412585 25.6137 1.44856C20.5442 3.25375 16.1967 6.64488 13.2123 11.1122C13.0589 11.3418 13.1273 11.6513 13.3599 11.8001V11.8001C13.5926 11.9489 13.9013 11.8806 14.0549 11.6511C16.9196 7.37068 21.0887 4.12136 25.9492 2.39062C30.9668 0.603918 36.4362 0.537094 41.496 2.20067C46.5558 3.86425 50.9185 7.1637 53.8969 11.5794C56.8753 15.995 58.3002 21.276 57.9472 26.5906C57.5942 31.9051 55.4834 36.9513 51.9472 40.9342C48.4109 44.9172 43.6502 47.6107 38.4148 48.5904C33.1795 49.5702 27.7669 48.7806 23.0297 46.346C18.4408 43.9876 14.7381 40.2155 12.4646 35.5938C12.3427 35.346 12.0457 35.2374 11.7955 35.3541V35.3541Z" fill="#B0855F"/>
+                    <path class="arrow" d="M27.3455 24.5455L21.5273 20L32 25L21.5273 30L27.3455 25.4545H-9.53674e-07V24.5455H27.3455Z" fill="#B0855F"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="condition_item">
+                <h3 class="condition_info">
+                    Рассрочка на 1 год без процентов
+                </h3>
+                <p class="condition_desc">
+                    Возможность согласования индивидуальных условий рассрочки
+                </p>
+                <p class="condition_label">
+                    Возможность согласования индивидуальных условий рассрочки
+                </p>
+                <button class="btn_arrow">
+                    Узнать подробнее <svg width="59" height="50" viewBox="0 0 59 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="circle" d="M11.7955 35.3541C11.5452 35.4709 11.4365 35.7686 11.5581 36.0165C13.9255 40.8393 17.7863 44.7756 22.5726 47.2354C27.5072 49.7715 33.1453 50.594 38.5988 49.5734C44.0523 48.5528 49.0114 45.7471 52.695 41.5982C56.3785 37.4492 58.5773 32.1928 58.945 26.6568C59.3127 21.1209 57.8284 15.6198 54.7259 11.0202C51.6234 6.42052 47.079 2.98359 41.8084 1.2507C36.5378 -0.482194 30.8404 -0.412585 25.6137 1.44856C20.5442 3.25375 16.1967 6.64488 13.2123 11.1122C13.0589 11.3418 13.1273 11.6513 13.3599 11.8001V11.8001C13.5926 11.9489 13.9013 11.8806 14.0549 11.6511C16.9196 7.37068 21.0887 4.12136 25.9492 2.39062C30.9668 0.603918 36.4362 0.537094 41.496 2.20067C46.5558 3.86425 50.9185 7.1637 53.8969 11.5794C56.8753 15.995 58.3002 21.276 57.9472 26.5906C57.5942 31.9051 55.4834 36.9513 51.9472 40.9342C48.4109 44.9172 43.6502 47.6107 38.4148 48.5904C33.1795 49.5702 27.7669 48.7806 23.0297 46.346C18.4408 43.9876 14.7381 40.2155 12.4646 35.5938C12.3427 35.346 12.0457 35.2374 11.7955 35.3541V35.3541Z" fill="#B0855F"/>
+                    <path class="arrow" d="M27.3455 24.5455L21.5273 20L32 25L21.5273 30L27.3455 25.4545H-9.53674e-07V24.5455H27.3455Z" fill="#B0855F"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="condition_item">
+                <h3 class="condition_info">
+                    Ипотека от 9%
+                </h3>
+                <p class="condition_desc">
+                    Выгодные ставки по ипотеке. 
+                    Все подробности у наших менеджеров
+                </p>
+                <p class="condition_label">
+                    Выгодные ставки по ипотеке. <br> 
+                    Все подробности у наших менеджеров
+                </p>
+                <button class="btn_arrow">
+                    Узнать подробнее <svg width="59" height="50" viewBox="0 0 59 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="circle" d="M11.7955 35.3541C11.5452 35.4709 11.4365 35.7686 11.5581 36.0165C13.9255 40.8393 17.7863 44.7756 22.5726 47.2354C27.5072 49.7715 33.1453 50.594 38.5988 49.5734C44.0523 48.5528 49.0114 45.7471 52.695 41.5982C56.3785 37.4492 58.5773 32.1928 58.945 26.6568C59.3127 21.1209 57.8284 15.6198 54.7259 11.0202C51.6234 6.42052 47.079 2.98359 41.8084 1.2507C36.5378 -0.482194 30.8404 -0.412585 25.6137 1.44856C20.5442 3.25375 16.1967 6.64488 13.2123 11.1122C13.0589 11.3418 13.1273 11.6513 13.3599 11.8001V11.8001C13.5926 11.9489 13.9013 11.8806 14.0549 11.6511C16.9196 7.37068 21.0887 4.12136 25.9492 2.39062C30.9668 0.603918 36.4362 0.537094 41.496 2.20067C46.5558 3.86425 50.9185 7.1637 53.8969 11.5794C56.8753 15.995 58.3002 21.276 57.9472 26.5906C57.5942 31.9051 55.4834 36.9513 51.9472 40.9342C48.4109 44.9172 43.6502 47.6107 38.4148 48.5904C33.1795 49.5702 27.7669 48.7806 23.0297 46.346C18.4408 43.9876 14.7381 40.2155 12.4646 35.5938C12.3427 35.346 12.0457 35.2374 11.7955 35.3541V35.3541Z" fill="#B0855F"/>
+                    <path class="arrow" d="M27.3455 24.5455L21.5273 20L32 25L21.5273 30L27.3455 25.4545H-9.53674e-07V24.5455H27.3455Z" fill="#B0855F"/>
+                    </svg>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="gallery center">
+        <h2 class="gallery_title">
+            Галерея
+        </h2>
+        <div class="gallery_slider">
+            <div class="gallery_slider_item">
+                <picture class="lobby_slider_pic">
+                    <source srcset="img/gallery1.webp" type="image/webp">
+                    <img src="img/gallery1.jpg" alt="">
+                </picture>
+            </div>
+            <div class="gallery_slider_item">
+                <picture class="lobby_slider_pic">
+                    <source srcset="img/gallery2.webp" type="image/webp">
+                    <img src="img/gallery2.jpg" alt="">
+                </picture>
+            </div>
+        </div>
+    </section>
   </div>
   <!-- scripts -->
   <script src="js/libs.min.js"></script>
