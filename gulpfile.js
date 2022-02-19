@@ -1,17 +1,3 @@
-/* 
-	packeges
-	
-	npm i gulp -g --save-dev
-	npm i gulp-sass --save-dev
-	npm i gulp-rename --save-dev
-	npm i gulp-autoprefixer --save-dev 
-	npm i gulp-sourcemaps --save-dev
-	npm i gulp-rigger --save-dev
-
-
-npm i --save-dev gulp-sass gulp-rename gulp-autoprefixer gulp-sourcemaps gulp-ripper browser-syn
-*/
-
 var gulp = require('gulp'),
  browserSync = require('browser-sync').create(),
  sass = require('gulp-sass'),
@@ -44,6 +30,8 @@ gulp.task('sass', function (done) {
   )
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('app/css/'))
+  .pipe(gulp.dest('build/css/'))
+
   .pipe(browserSync.stream());
 
  done();
@@ -88,18 +76,15 @@ gulp.task('styles', function (done) {
 
 gulp.task('serve', function (done) {
  browserSync.init({
-  server: 'app/',
+  server: 'build/',
   startPath: 'sitemap.html',
  });
 
- gulp.watch('app/sass/*.scss', gulp.series('sass', 'html'));
- gulp
-  .watch(['app/**/*.html', 'app/**/*.js', 'app/**/*.php'])
-  .on('change', () => {
-   browserSync.reload();
-
-   done();
-  });
+ gulp.watch('app/sass/*.scss', gulp.series('sass'));
+ gulp.watch(
+  ['app/**/*.html', 'app/**/*.js', 'app/**/*.php'],
+  gulp.series('html', 'buildJs', 'reload')
+ );
 
  done();
 });
@@ -107,6 +92,11 @@ gulp.task('serve', function (done) {
 gulp.task('html', function (done) {
  gulp.src('app/*.html').pipe(rigger()).pipe(gulp.dest('build/'));
 
+ done();
+});
+
+gulp.task('reload', function (done) {
+ browserSync.reload();
  done();
 });
 
