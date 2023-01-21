@@ -1,18 +1,18 @@
-var gulp = require('gulp'),
- browserSync = require('browser-sync').create(),
- sass = require('gulp-sass'),
- rename = require('gulp-rename'),
- autoprefixer = require('gulp-autoprefixer'),
- sourcemaps = require('gulp-sourcemaps'),
- concat = require('gulp-concat'),
- uglify = require('gulp-uglifyjs'),
- rigger = require('gulp-rigger'),
- webp = require('gulp-webp'),
- imagemin = require('gulp-imagemin'),
- jpeg2000 = require('gulp-jpeg-2000');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglifyjs');
+const rigger = require('gulp-rigger');
+const webp = require('gulp-webp');
+const imagemin = require('gulp-imagemin');
+const jpeg2000 = require('gulp-jpeg-2000');
 
-gulp.task('sass', function (done) {
- gulp
+const startSass = () => {
+ return gulp
   .src('app/sass/**/*.scss')
   .pipe(sourcemaps.init())
   .pipe(rename({ suffix: '.min' }))
@@ -33,12 +33,12 @@ gulp.task('sass', function (done) {
   .pipe(gulp.dest('build/css/'))
 
   .pipe(browserSync.stream());
+};
 
- done();
-});
+exports.startSass = startSass;
 
-gulp.task('scripts', function (done) {
- gulp
+const scripts = () => {
+ return gulp
   .src([
    'app/libs/jquery/dist/jquery.min.js',
    'app/libs/slick-carousel/slick/slick.min.js',
@@ -48,11 +48,12 @@ gulp.task('scripts', function (done) {
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('app/js/'));
- done();
-});
+};
 
-gulp.task('styles', function (done) {
- gulp
+exports.scripts = scripts;
+
+const styles = () => {
+ return gulp
   .src([
    'app/libs/slick-carousel/slick/slick.scss',
    'app/libs/lightbox/dist/css/lightbox.min.css',
@@ -71,74 +72,68 @@ gulp.task('styles', function (done) {
     )
     .pipe(gulp.dest('app/css/'))
   );
- done();
-});
+};
+exports.styles = styles;
 
-gulp.task('serve', function (done) {
+const serve = () => {
  browserSync.init({
   server: 'build/',
   startPath: 'sitemap.html',
  });
 
- gulp.watch('app/sass/*.scss', gulp.series('sass'));
+ gulp.watch('app/sass/*.scss', gulp.series('startSass'));
  gulp.watch(
   ['app/**/*.html', 'app/**/*.js', 'app/**/*.php'],
   gulp.series('html', 'buildJs', 'reload')
  );
+};
+exports.serve = serve;
 
- done();
-});
+const html = () => {
+ return gulp.src('app/*.html').pipe(rigger()).pipe(gulp.dest('build/'));
+};
 
-gulp.task('html', function (done) {
- gulp.src('app/*.html').pipe(rigger()).pipe(gulp.dest('build/'));
+exports.html = html;
 
- done();
-});
+const reload = () => {
+ return browserSync.reload();
+};
+exports.reload = reload;
 
-gulp.task('reload', function (done) {
- browserSync.reload();
- done();
-});
-
-gulp.task('convertJPEG2000', function (done) {
- gulp
-  .src('app/img/**/*.{jpg,jpeg,png}')
-  .pipe(jpeg2000())
-  .pipe(gulp.dest('app/img/'));
-
- done();
-});
-
-gulp.task('convertWEBP', function (done) {
- gulp.src('app/img/*.{jpg,jpeg,png}').pipe(webp()).pipe(gulp.dest('app/img/'));
-
- done();
-});
-
-gulp.task('imagemin', function (done) {
- gulp
+const startImagemin = () => {
+ return gulp
   .src('app/img/**/*.{jpg,jpeg,png,svg,gif}')
   .pipe(imagemin())
   .pipe(gulp.dest('build/img/'));
+};
+exports.startImagemin = startImagemin;
 
- done();
-});
-gulp.task('buildCss', function (done) {
- gulp.src('app/css/**/*.css').pipe(gulp.dest('build/css/'));
- done();
-});
-gulp.task('buildJs', function (done) {
- gulp.src('app/js/**/*.js').pipe(gulp.dest('build/js/'));
- done();
-});
-gulp.task('buildFonts', function (done) {
- gulp.src('app/fonts/**/*').pipe(gulp.dest('build/fonts/'));
- done();
-});
+const buildCss = () => {
+ return gulp.src('app/css/**/*.css').pipe(gulp.dest('build/css/'));
+};
+exports.buildCss = buildCss;
 
-gulp.task(
- 'build',
- gulp.series('imagemin', 'html', 'buildCss', 'buildJs', 'buildFonts')
-);
+const buildJs = () => {
+ return gulp.src('app/js/**/*.js').pipe(gulp.dest('build/js/'));
+};
 
-gulp.task('default', gulp.series('sass', 'html', 'scripts', 'styles', 'serve'));
+exports.buildJs = buildJs;
+
+const buildFonts = () => {
+ return gulp.src('app/fonts/**/*').pipe(gulp.dest('build/fonts/'));
+};
+
+exports.buildFonts = buildFonts;
+
+const build = () => {
+ return gulp.series(
+  'startImagemin',
+  'html',
+  'buildCss',
+  'buildJs',
+  'buildFonts'
+ );
+};
+exports.build = build;
+
+exports.default = gulp.series(startSass, html, scripts, styles, serve);

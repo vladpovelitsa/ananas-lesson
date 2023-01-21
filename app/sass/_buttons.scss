@@ -1,0 +1,19 @@
+.filter_toggler {
+  background: var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  min-width: 270px;
+  padding: 10px 22px;
+  box-shadow: inset 5px 5px 0 0 #000, inset -5px -5px 0 0 #000;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: inset 5px 5px 0 0 transparent, inset -5px -5px 0 0 transparent;
+  }
+}
